@@ -179,6 +179,7 @@ Blockly.Blocks["xbot_wifi_on_receive_message_from_dashboard"] = {
 };
 
 Blockly.Python['xbot_wifi_connect'] = function(block) {
+  Blockly.Python.definitions_['import_wifi'] = 'from wifi import *';
   var value_wifi = Blockly.Python.valueToCode(block, 'WIFI', Blockly.Python.ORDER_ATOMIC);
   var value_password = Blockly.Python.valueToCode(block, 'PASSWORD', Blockly.Python.ORDER_ATOMIC);
   var value_name = Blockly.Python.valueToCode(block, 'NAME', Blockly.Python.ORDER_ATOMIC);
@@ -188,12 +189,14 @@ Blockly.Python['xbot_wifi_connect'] = function(block) {
 };
 
 Blockly.Python['xbot_wifi_check_message'] = function(block) {
+  Blockly.Python.definitions_['import_wifi'] = 'from wifi import *';
   // TODO: Assemble Python into code variable.
   var code = 'check_message()\n';
   return code;
 };
 
 Blockly.Python['xbot_wifi_send_message'] = function(block) {
+  Blockly.Python.definitions_['import_wifi'] = 'from wifi import *';
   var value_message = Blockly.Python.valueToCode(block, 'MESSAGE', Blockly.Python.ORDER_ATOMIC);
   var value_name = Blockly.Python.valueToCode(block, 'NAME', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
@@ -202,6 +205,7 @@ Blockly.Python['xbot_wifi_send_message'] = function(block) {
 };
 
 Blockly.Python['xbot_wifi_log_data'] = function(block) {
+  Blockly.Python.definitions_['import_wifi'] = 'from wifi import *';
   var value_data = Blockly.Python.valueToCode(block, 'DATA', Blockly.Python.ORDER_ATOMIC);
   var dropdown_channel = block.getFieldValue('CHANNEL');
   // TODO: Assemble Python into code variable.
@@ -210,6 +214,7 @@ Blockly.Python['xbot_wifi_log_data'] = function(block) {
 };
 
 Blockly.Python['xbot_wifi_on_receive_message'] = function(block) {
+  Blockly.Python.definitions_['import_wifi'] = 'from wifi import *';
   var variable_message = Blockly.Python.variableDB_.getName(block.getFieldValue('message'), Blockly.Variables.NAME_TYPE);
   var statements_action = Blockly.Python.statementToCode(block, 'ACTION');
   // TODO: Assemble Python into code variable.
@@ -224,6 +229,7 @@ Blockly.Python['xbot_wifi_on_receive_message'] = function(block) {
 };
 
 Blockly.Python['xbot_wifi_on_receive_message_from_dashboard'] = function(block) {
+  Blockly.Python.definitions_['import_wifi'] = 'from wifi import *';
   var variable_message = Blockly.Python.variableDB_.getName(block.getFieldValue('message'), Blockly.Variables.NAME_TYPE);
   var dropdown_channel = block.getFieldValue('CHANNEL');
   var statements_action = Blockly.Python.statementToCode(block, 'ACTION');
