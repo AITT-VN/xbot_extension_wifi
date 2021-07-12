@@ -1,0 +1,10 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+<category id="wifi" name="WIFI" colour="#e3008c" icon="wifi">
+  <block type="xbot_wifi_connect"><value name="WIFI"><shadow type="text"><field name="TEXT">wifi</field></shadow></value><value name="PASSWORD"><shadow type="text"><field name="TEXT">password</field></shadow></value><value name="NAME"><shadow type="text"><field name="TEXT">xbot_123</field></shadow></value></block>
+  <block type="xbot_wifi_check_message"></block>
+  <block type="xbot_wifi_send_message"><value name="MESSAGE"><shadow type="text"><field name="TEXT">Hello</field></shadow></value><value name="NAME"><shadow type="text"><field name="TEXT">xbot_456</field></shadow></value></block>
+  <block type="xbot_wifi_on_receive_message"></block>
+  <block type="xbot_wifi_log_data"><value name="DATA"><shadow type="text"><field name="TEXT">data</field></shadow></value></block>
+  <block type="xbot_wifi_on_receive_message_from_dashboard"></block>
+</category>
+</xml>
