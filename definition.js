@@ -1,7 +1,7 @@
 Blockly.Blocks["xbot_wifi_connect"] = {
   init: function () {
     this.jsonInit({
-      colour: "#7F85D4",
+      colour: "#CC6600",
       nextStatement: null,
       tooltip: Blockly.Msg.XBOT_WIFI_CONNECT_TOOLTIP,
       message0: Blockly.Msg.XBOT_WIFI_CONNECT_MESSAGE0,
@@ -22,7 +22,7 @@ Blockly.Blocks["xbot_wifi_connect"] = {
 Blockly.Blocks["xbot_wifi_check_message"] = {
   init: function () {
     this.jsonInit({
-      colour: "#7F85D4",
+      colour: "#CC6600",
       nextStatement: null,
       tooltip: Blockly.Msg.XBOT_WIFI_CHECK_MESSAGE_TOOLTIP,
       message0: Blockly.Msg.XBOT_WIFI_CHECK_MESSAGE_MESSAGE0,
@@ -35,7 +35,7 @@ Blockly.Blocks["xbot_wifi_check_message"] = {
 Blockly.Blocks["xbot_wifi_send_message"] = {
   init: function () {
     this.jsonInit({
-      colour: "#7F85D4",
+      colour: "#CC6600",
       nextStatement: null,
       tooltip: Blockly.Msg.XBOT_WIFI_SEND_MESSAGE_TOOLTIP,
       message0: Blockly.Msg.XBOT_WIFI_SEND_MESSAGE_MESSAGE0,
@@ -54,7 +54,7 @@ Blockly.Blocks["xbot_wifi_send_message"] = {
 Blockly.Blocks["xbot_wifi_log_data"] = {
   init: function () {
     this.jsonInit({
-      colour: "#7F85D4",
+      colour: "#CC6600",
       nextStatement: null,
       tooltip: Blockly.Msg.XBOT_WIFI_LOG_DATA_TOOLTIP,
       message0: Blockly.Msg.XBOT_WIFI_LOG_DATA_MESSAGE0,
@@ -102,7 +102,7 @@ Blockly.Blocks["xbot_wifi_log_data"] = {
 Blockly.Blocks["xbot_wifi_on_receive_message"] = {
   init: function () {
     this.jsonInit({
-      colour: "#7F85D4",
+      colour: "#CC6600",
       nextStatement: null,
       tooltip: Blockly.Msg.XBOT_WIFI_ON_RECEIVE_MESSAGE_TOOLTIP,
       message0: Blockly.Msg.XBOT_WIFI_ON_RECEIVE_MESSAGE_MESSAGE0,
@@ -124,7 +124,7 @@ Blockly.Blocks["xbot_wifi_on_receive_message"] = {
 Blockly.Blocks["xbot_wifi_on_receive_message_from_dashboard"] = {
   init: function () {
     this.jsonInit({
-      colour: "#7F85D4",
+      colour: "#CC6600",
       nextStatement: null,
       tooltip:
         Blockly.Msg.XBOT_WIFI_ON_RECEIVE_MESSAGE_FROM_DASHBOARD_TOOLTIP,
