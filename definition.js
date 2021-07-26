@@ -103,10 +103,8 @@ Blockly.Blocks["xbot_wifi_on_receive_message"] = {
   init: function () {
     this.jsonInit({
       colour: "#CC6600",
-      nextStatement: null,
       tooltip: Blockly.Msg.XBOT_WIFI_ON_RECEIVE_MESSAGE_TOOLTIP,
       message0: Blockly.Msg.XBOT_WIFI_ON_RECEIVE_MESSAGE_MESSAGE0,
-      previousStatement: null,
       args0: [
         {
           variable: Blockly.Msg.XBOT_WIFI_ON_RECEIVE_MESSAGE_MESSAGE1,
@@ -125,12 +123,10 @@ Blockly.Blocks["xbot_wifi_on_receive_message_from_dashboard"] = {
   init: function () {
     this.jsonInit({
       colour: "#CC6600",
-      nextStatement: null,
       tooltip:
         Blockly.Msg.XBOT_WIFI_ON_RECEIVE_MESSAGE_FROM_DASHBOARD_TOOLTIP,
       message0:
         Blockly.Msg.XBOT_WIFI_ON_RECEIVE_MESSAGE_FROM_DASHBOARD_MESSAGE0,
-      previousStatement: null,
       args0: [
         {
           variable:
@@ -184,14 +180,14 @@ Blockly.Python['xbot_wifi_connect'] = function(block) {
   var value_password = Blockly.Python.valueToCode(block, 'PASSWORD', Blockly.Python.ORDER_ATOMIC);
   var value_name = Blockly.Python.valueToCode(block, 'NAME', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
-  var code = 'connect(' + value_wifi + ', ' + value_password + ', ' + value_name + ')\n';
+  var code = 'wifi.connect(' + value_wifi + ', ' + value_password + ', ' + value_name + ')\n';
   return code;
 };
 
 Blockly.Python['xbot_wifi_check_message'] = function(block) {
   Blockly.Python.definitions_['import_wifi'] = 'from wifi import *';
   // TODO: Assemble Python into code variable.
-  var code = 'check_message()\n';
+  var code = 'wifi.check_message()\n';
   return code;
 };
 
@@ -200,7 +196,7 @@ Blockly.Python['xbot_wifi_send_message'] = function(block) {
   var value_message = Blockly.Python.valueToCode(block, 'MESSAGE', Blockly.Python.ORDER_ATOMIC);
   var value_name = Blockly.Python.valueToCode(block, 'NAME', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
-  var code = 'send_message(' + value_name + ', ' + value_message + ')\n';
+  var code = 'wifi.send_message(' + value_name + ', ' + value_message + ')\n';
   return code;
 };
 
@@ -209,7 +205,7 @@ Blockly.Python['xbot_wifi_log_data'] = function(block) {
   var value_data = Blockly.Python.valueToCode(block, 'DATA', Blockly.Python.ORDER_ATOMIC);
   var dropdown_channel = block.getFieldValue('CHANNEL');
   // TODO: Assemble Python into code variable.
-  var code = 'log_data("' + dropdown_channel + '", ' + value_data + ')\n';
+  var code = 'wifi.log_data("' + dropdown_channel + '", ' + value_data + ')\n';
   return code;
 };
 
@@ -224,7 +220,7 @@ Blockly.Python['xbot_wifi_on_receive_message'] = function(block) {
       statements_action || Blockly.Python.PASS
     ]);
   
-  var code = 'on_receive_message("", ' + cbFunctionName + ')\n';
+  var code = 'wifi.on_receive_message("", ' + cbFunctionName + ')\n';
   return code;
 };
 
@@ -240,6 +236,6 @@ Blockly.Python['xbot_wifi_on_receive_message_from_dashboard'] = function(block) 
       statements_action || Blockly.Python.PASS
     ]);
   
-  var code = 'on_receive_message("' + dropdown_channel + '", ' + cbFunctionName + ')\n';
+  var code = 'wifi.on_receive_message("' + dropdown_channel + '", ' + cbFunctionName + ')\n';
   return code;
 };
